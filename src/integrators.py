@@ -1,6 +1,6 @@
-# simplettic methods
+# symplectic methods
 
-def euler_simplettic(t, p, q, dt, f):
+def euler_symplectic(t, p, q, dt, f):
     dhdq, dhdp = f(t, p, q)
 
     next_p = p - dt * dhdq
@@ -23,7 +23,7 @@ def verlet_stormer(t, p, q, dt, f):
 
     return t+dt, next_p, next_q
 
-# non-simplettic methods
+# non-symplectic methods
 
 def rk4(t, p, q, dt, f): 
     k1p, k1q = f(t, p, q)
