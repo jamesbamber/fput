@@ -1,12 +1,8 @@
-import random
-
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
-
 import numpy as np
 
-from constants import *
-import integrators
+from config import *
 from state import SimulationState
 
 state = SimulationState()
@@ -40,7 +36,7 @@ def animate(frame):
     i = int(curr_t / dt)
 
     while len(state.t) <= i:
-        state.step(integrators.rk4)
+        state.step(integrator)
 
     if curr_t > TIME_WINDOW:
         ax_hamiltonian.set_xlim((curr_t - TIME_WINDOW, curr_t + 0.01 * TIME_WINDOW))

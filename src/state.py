@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.fft import dst
 
-from constants import *
+from config import *
 from physics import hamiltonian, f
 
 class SimulationState:

@@ -1,5 +1,5 @@
 import numpy as np
-from constants import K, alpha, beta
+from config import K, alpha, beta
 
 def spring_force(d):
     return K*d + alpha*(d**2) + beta*(d**3)
