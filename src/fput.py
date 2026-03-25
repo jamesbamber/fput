@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from constants import *
-from integrators import verlet_stormer, euler_simplettic
+import integrators
 from state import SimulationState
 
 state = SimulationState()
@@ -40,7 +40,7 @@ def animate(frame):
     i = int(curr_t / dt)
 
     while len(state.t) <= i:
-        state.step(euler_simplettic)
+        state.step(integrators.rk4)
 
     if curr_t > TIME_WINDOW:
         ax_hamiltonian.set_xlim((curr_t - TIME_WINDOW, curr_t + 0.01 * TIME_WINDOW))

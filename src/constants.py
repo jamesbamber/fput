@@ -3,7 +3,7 @@ from scipy.fft import idst
 
 N = 20          # number of moving particles
 K = 10.0        # linear factor
-alpha = 0.0     # quadratic factor
+alpha = 2.0     # quadratic factor
 beta = 0.0      # cubic factor
 
 # momentum in the mode space
@@ -20,4 +20,4 @@ dt = 0.01
 FPS = 60
 TIME_SCALE = 50
 TIME_WINDOW = 100
-PLOT_MODES = 5 # how many modes energy to plot
+PLOT_MODES = 5  # how many energy modes to plot
