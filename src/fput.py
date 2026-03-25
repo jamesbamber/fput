@@ -8,10 +8,12 @@ from state import SimulationState
 fig = plt.figure(figsize=(10, 20))
 ax = fig.add_subplot(2,2,1,autoscale_on=False, xlim=(0, N+1), ylim=(-N/2, N/2))
 ax.grid()
+ax.set_title("Longitudinal View")
 points, = ax.plot([], [], '.')
 
 ax2 = fig.add_subplot(2,2,2,autoscale_on=False, xlim=(0, N+1), ylim=(-N/2, N/2))
 ax2.grid()
+ax2.set_title("Trasversal View")
 vertical_points, = ax2.plot([], [], 'g-')
 
 ax_hamiltonian = fig.add_subplot(2,2,3,autoscale_on=False, xlim=(0, TIME_WINDOW))
@@ -56,11 +58,11 @@ def animate(frame):
 
     if e_slice.size > 0:
 
-        min_h = np.min(e_slice)
-        max_h = np.max(e_slice)
+        min_e = np.min(e_slice)
+        max_e = np.max(e_slice)
 
-        padding = (max_h - min_h)*0.05 if min_h != max_h else 1.0
-        ax_modes.set_ylim((min_h - padding, max_h + padding))
+        padding = (max_e - min_e)*0.05 if min_e != max_e else 1.0
+        ax_modes.set_ylim((min_e - padding, max_e + padding))
 
         for k in range(PLOT_MODES):
             mode_energy_levels[k].set_data(state.t[start_index:i], e_slice[:, k])
