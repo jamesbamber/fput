@@ -16,7 +16,6 @@ initial_p = np.array(idst(initial_P, type=1, norm='ortho'))
 initial_q = np.zeros(N)
 displacement = np.arange(1, N+1, 1)
 
-
 # simulation parameters
 
 integrator = integrators.verlet_stormer
@@ -24,4 +23,4 @@ dt = 0.01
 FPS = 60
 TIME_SCALE = 50
 TIME_WINDOW = 100
-PLOT_MODES = 5  # how many energy modes to plot
+PLOT_MODES = 10 # how many energy modes to plot

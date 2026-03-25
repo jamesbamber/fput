@@ -5,30 +5,26 @@ import numpy as np
 from config import *
 from state import SimulationState
 
-state = SimulationState()
-
-#plotting
-
 fig = plt.figure(figsize=(10, 20))
 ax = fig.add_subplot(2,2,1,autoscale_on=False, xlim=(0, N+1), ylim=(-N/2, N/2))
-ax.set_aspect('equal')
 ax.grid()
-
 points, = ax.plot([], [], '.')
 
 ax2 = fig.add_subplot(2,2,2,autoscale_on=False, xlim=(0, N+1), ylim=(-N/2, N/2))
-ax2.set_aspect('equal')
 ax2.grid()
 vertical_points, = ax2.plot([], [], 'g-')
 
 ax_hamiltonian = fig.add_subplot(2,2,3,autoscale_on=False, xlim=(0, TIME_WINDOW))
 ax_hamiltonian.grid()
+ax_hamiltonian.set_title("Hamiltonian")
 energy_level, = ax_hamiltonian.plot([], [], '-')
 
 ax_modes = fig.add_subplot(2,2,4,autoscale_on=False, xlim=(0, TIME_WINDOW))
 ax_modes.grid()
+ax_modes.set_title("Modal Energy")
 
-mode_energy_levels = [ax_modes.plot([], [], '-')[0] for i in range(N)]
+mode_energy_levels = [ax_modes.plot([], [], '-', label=f'Mode {i+1}')[0] for i in range(PLOT_MODES)]
+ax_modes.legend(loc='upper right', fontsize='small')
 
 def animate(frame):
 
@@ -69,10 +65,20 @@ def animate(frame):
         for k in range(PLOT_MODES):
             mode_energy_levels[k].set_data(state.t[start_index:i], e_slice[:, k])
 
-    return points, vertical_points, energy_level,
+    return points, vertical_points, energy_level
 
-ani = animation.FuncAnimation (
-    fig, animate, 10000, interval=1000 / FPS, blit=False
-)
+if __name__ == "__main__":
+    state = SimulationState()
+    try:
+        # for _ in range(200000):
+        #     state.step(integrator)
+        ani = animation.FuncAnimation (
+            fig, animate, 10000, interval=1000 / FPS, blit=False
+        )
+        plt.show()
 
-plt.show()
+    except KeyboardInterrupt:
+        print("Simulation interrupted by user.")
+    finally:
+        state.save_data("simulation_dump.npz")
+

@@ -20,7 +20,7 @@ class SimulationState:
 
         self.mode_P = [ initial_mode_P ]
         self.mode_Q = [ initial_mode_Q ]
-        self.mode_E = [ 0.5 * (initial_mode_P ** 2 + self.omega**2 * initial_mode_Q[-1]**2) ]
+        self.mode_E = [ 0.5 * (initial_mode_P ** 2 + self.omega**2 * initial_mode_Q**2) ]
 
     def step(self, integrator):
         '''
@@ -40,3 +40,22 @@ class SimulationState:
         self.mode_P.append(mode_P)
         self.mode_Q.append(mode_Q)
         self.mode_E.append(0.5 * (mode_P ** 2 + self.omega**2 * mode_Q**2))
+
+    def save_data(self, filename):
+        np.savez_compressed(
+            filename,
+            t=np.array(self.t),
+            p=np.array(self.p),
+            q=np.array(self.q),
+            H=np.array(self.H),
+            mode_P=np.array(self.mode_P),
+            mode_Q=np.array(self.mode_Q),
+            mode_E=np.array(self.mode_E),
+            omega=np.array(self.omega),
+            N = N,
+            K = K,
+            alpha = alpha,
+            beta = beta,
+        )
+
+        print(f"Simulation data successfully saved to {filename}")

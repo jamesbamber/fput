@@ -3,7 +3,7 @@ from scipy.fft import idst
 
 import integrators
 
-N = 64          # number of moving particles
+N = 32          # number of moving particles
 K = 10.0        # linear factor
 alpha = 0.0     # quadratic factor
 beta = 0.0      # cubic factor
