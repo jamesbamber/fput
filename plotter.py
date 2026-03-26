@@ -12,10 +12,10 @@ def modal_energy():
     ax.grid()
     ax.set_title("Modal Energy")
 
-    mode_energy_levels = [ax.plot([], [], '-', label=f'Mode {i+1}')[0] for i in range(10)]
+    mode_energy_levels = [ax.plot([], [], '-', label=f'Mode {i+1}')[0] for i in range(5)]
     ax.legend(loc='upper right', fontsize='small')
 
-    for i in range(10):
+    for i in range(5):
         mode_energy_levels[i].set_data(data['t'], data['mode_E'][:, i])
 
     ax.relim()        
@@ -32,7 +32,7 @@ def hamiltonian():
     hamiltonian, = ax.plot([], [], '-')
     ax.legend(loc='upper right', fontsize='small')
 
-    hamiltonian.set_data(data['t'], data['H'])
+    hamiltonian.set_data(data['t'][::50], data['H'][::50])
 
     ax.relim()        
     ax.autoscale_view()
