@@ -90,3 +90,91 @@ Relative standard deviation: 0.01909615256715599
 Maximum relative deviation from the mean: 0.07375359739349026
 
 
+integrator: verlet_stormer
+iterations: 15283
+Mean: 0.45277382419959467
+Standard deviation: 4.131287421903715e-05
+Relative standard deviation: 9.12439545109952e-05
+Maximum relative deviation from the mean: 0.00025108524309956366
+
+
+integrator: verlet_stormer
+iterations: 15283
+Mean: 0.45277382419959467
+Standard deviation: 4.131287421903715e-05
+Relative standard deviation: 9.12439545109952e-05
+Maximum relative deviation from the mean: 0.00025108524309956366
+
+
+integrator: verlet_stormer
+iterations: 200001
+Mean: 0.4527726495592369
+Standard deviation: 3.392361190301134e-05
+Relative standard deviation: 7.492416323299375e-05
+Maximum relative deviation from the mean: 0.0002558510294941529
+
+
+integrator: euler_explicit
+iterations: 32834
+Mean: nan
+Standard deviation: nan
+Relative standard deviation: nan
+Maximum relative deviation from the mean: nan
+
+
+integrator: euler_symplectic
+iterations: 200001
+Mean: 12.528465522434582
+Standard deviation: 0.24543543530962195
+Relative standard deviation: 0.019590223149844127
+Maximum relative deviation from the mean: 0.07236297111801529
+
+
+integrator: euler_symplectic
+iterations: 200001
+Mean: 12.528465522434582
+Standard deviation: 0.24543543530962195
+Relative standard deviation: 0.019590223149844127
+Maximum relative deviation from the mean: 0.07236297111801529
+
+
+integrator: verlet_stormer
+iterations: 200001
+Mean: 12.488879898123384
+Standard deviation: 0.011756673460021039
+Relative standard deviation: 0.0009413713284077326
+Maximum relative deviation from the mean: 0.00393138901798276
+
+
+integrator: rk4
+iterations: 200001
+Mean: 10.723184142365104
+Standard deviation: 0.9118911882374359
+Relative standard deviation: 0.08503921746850737
+Maximum relative deviation from the mean: 0.16569853077641913
+
+
+integrator: verlet_stormer
+iterations: 200001
+Mean: 12.488879898123384
+Standard deviation: 0.011756673460021039
+Relative standard deviation: 0.0009413713284077326
+Maximum relative deviation from the mean: 0.00393138901798276
+
+
+integrator: verlet_stormer
+iterations: 200001
+Mean: 12.488879898123384
+Standard deviation: 0.011756673460021039
+Relative standard deviation: 0.0009413713284077326
+Maximum relative deviation from the mean: 0.00393138901798276
+
+
+integrator: verlet_stormer
+iterations: 200001
+Mean: 12.488879898123384
+Standard deviation: 0.011756673460021039
+Relative standard deviation: 0.0009413713284077326
+Maximum relative deviation from the mean: 0.00393138901798276
+
+

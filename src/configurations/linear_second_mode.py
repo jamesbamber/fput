@@ -9,7 +9,7 @@ alpha = 0.0    # quadratic factor
 beta = 0.0      # cubic factor
 
 initial_Q = np.zeros(N)
-initial_Q[9] = 10.0  # Large displacement in the second mode
+initial_Q[1] = 10.0  # Large displacement in the second mode
 initial_q = idst(initial_Q, type=1, norm='ortho')
 initial_p = np.zeros(N)
 displacement = np.arange(1, N+1, 1)
