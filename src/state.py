@@ -52,6 +52,7 @@ class SimulationState:
             mode_Q=np.array(self.mode_Q),
             mode_E=np.array(self.mode_E),
             omega=np.array(self.omega),
+            integrator=integrator.__name__,
             N = N,
             K = K,
             alpha = alpha,
