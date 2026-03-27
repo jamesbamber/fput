@@ -19,6 +19,6 @@ displacement = np.arange(1, N+1, 1)
 integrator = integrators.verlet_stormer
 dt = 0.1
 FPS = 60
-TIME_SCALE = 100
+TIME_SCALE = 200
 TIME_WINDOW = 1000
 PLOT_MODES = 10 # how many energy modes to plot
