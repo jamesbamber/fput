@@ -22,6 +22,7 @@ def modal_energy():
     ax.autoscale_view()
 
     plt.show()
+    
 
 def hamiltonian():
     fig = plt.figure(figsize=(10, 20))
@@ -37,7 +38,21 @@ def hamiltonian():
     ax.relim()        
     ax.autoscale_view()
 
+    H = np.array(data['H'], dtype=float)
+    H_mean = np.mean(H)
+    std = np.std(H)
+    max_rel_semi_disp = np.max(np.abs(H - H_mean)) / np.abs(H_mean)
+
+    with open("hamiltonian_results.txt", 'a') as f:
+        f.write(f"integrator: {data['integrator']}\n")
+        f.write(f"iterations: {data['t'].size}\n")
+        f.write(f"Mean: {H_mean}\n")
+        f.write(f"Standard deviation: {std}\n")
+        f.write(f"Relative standard deviation: {std / np.abs(H_mean)}\n")
+        f.write(f"Maximum relative deviation from the mean: {max_rel_semi_disp}\n")
+        f.write("\n\n")
+
     plt.show()
 
-# hamiltonian()
-modal_energy()
+hamiltonian()
+# modal_energy()

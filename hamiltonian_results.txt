@@ -1,0 +1,92 @@
+Some data collected by simulating hamiltonian trough about many iterations with different integrators, keeping
+fixed N = 32, K = 10.0, alpha = 2.0, beta = 0.0.
+
+integrator: rk4
+iterations: 50251
+Mean: 12.4999994891215
+Standard deviation: 4.021089200618657e-07
+Relative standard deviation: 3.216871491969364e-08
+Maximum relative deviation from the mean: 5.0737894752070535e-08
+
+
+integrator: euler_explicit
+iterations: 10417
+Mean: 14.241994169534317
+Standard deviation: 2.689522910146849
+Relative standard deviation: 0.18884454509187534
+Maximum relative deviation from the mean: 0.8593347148486589
+
+
+integrator: euler_symplectic
+iterations: 50334
+Mean: 12.500320426033301
+Standard deviation: 0.031206009328059246
+Relative standard deviation: 0.002496416752891332
+Maximum relative deviation from the mean: 0.00614749568523417
+
+
+integrator: verlet_stormer
+iterations: 50417
+Mean: 12.499904561055436
+Standard deviation: 0.0001485685681224136
+Relative standard deviation: 1.1885576197540915e-05
+Maximum relative deviation from the mean: 3.308577805244646e-05
+
+
+integrator: verlet_stormer
+iterations: 200001
+Mean: 12.49990550597322
+Standard deviation: 0.0001235940531740467
+Relative standard deviation: 9.887598999447307e-06
+Maximum relative deviation from the mean: 3.3772983608264656e-05
+
+
+integrator: rk4
+iterations: 200001
+Mean: 12.499997667328165
+Standard deviation: 1.398628690272744e-06
+Relative standard deviation: 1.1189031610209063e-07
+Maximum relative deviation from the mean: 1.866160924720438e-07
+
+
+integrator: rk4
+iterations: 1000001
+Mean: 12.499986647646784
+Standard deviation: 8.34542801608726e-06
+Relative standard deviation: 6.676349544467992e-07
+Maximum relative deviation from the mean: 1.1923882571569362e-06
+
+
+integrator: verlet_stormer
+iterations: 1000001
+Mean: 12.499899248058972
+Standard deviation: 0.00010912505309084156
+Relative standard deviation: 8.73007461302433e-06
+Maximum relative deviation from the mean: 3.559277878749231e-05
+
+
+integrator: rk4
+iterations: 1000001
+Mean: 7.474325942979849
+Standard deviation: 1.9847872190914249
+Relative standard deviation: 0.2655473194817798
+Maximum relative deviation from the mean: 0.672391610341858
+
+
+
+integrator: verlet_stormer
+iterations: 1000001
+Mean: 12.487815732606856
+Standard deviation: 0.011624701173441799
+Relative standard deviation: 0.0009308834645188281
+Maximum relative deviation from the mean: 0.004134804914597067
+
+
+integrator: euler_symplectic
+iterations: 1000001
+Mean: 12.530829925550453
+Standard deviation: 0.2392906400513954
+Relative standard deviation: 0.01909615256715599
+Maximum relative deviation from the mean: 0.07375359739349026
+
+
